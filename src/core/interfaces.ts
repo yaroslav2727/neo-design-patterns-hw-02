@@ -1,16 +1,12 @@
-import { User } from '../models/User';
-
 export interface INotificationChannel {
-    send(message: string): void;
+  send(message: string): void;
 }
 
 export interface ILogger {
-    log(message: string): void;
+  log(message: string): void;
 }
 
 export interface INotificationService {
-    addChannel(channel: INotificationChannel): void;
-    sendEmail(user: User, message: string): void;
-    sendSMS(user: User, message: string): void;
-    sendPush(user: User, message: string): void;
+  addChannel(channel: INotificationChannel): void;
+  send(message: string): void;
 }
